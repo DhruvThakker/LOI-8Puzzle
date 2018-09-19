@@ -1,0 +1,500 @@
+
+.section-container-green {
+  $green: #00A896;
+  $white: white;
+  $squareBackground: $white;
+  $squareFont: $green;
+  $squareBlankSpaceBackground: $green;
+  width: 100%;
+  height: 100%;
+  background: $green;
+
+  .puzzleContainer {
+    margin-top: 70px;
+  }
+
+  .square {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transition: transform 450ms ease;
+  }
+
+  .square-no-transform {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transform: none;
+    -webkit-transform: none; /* Safari and Chrome */
+    -moz-transform: none; /* Firefox */
+    -ms-transform: none; /* IE 9 */
+    -o-transform: none; /* Opera */
+  }
+
+  .square-blank-space {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 3%;
+    z-index: 0;
+    border: 2px solid $green;
+    background-color: $green;
+  }
+
+  .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $squareFont;
+    font-size: 32px;
+  }
+  .table-cell-btn {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $white;
+    font-size: 24px;
+  }
+
+  .nav {
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: $green;
+  }
+
+  .margin-bottom {
+    margin-bottom: 2%;
+    background-color: $green;
+  }
+
+  .result {
+    color: white;
+    margin-top: 20px;
+  }
+
+  .pill {
+    background-color: $green;
+    color: $white;
+    height: 40px;
+    width: 100px;
+    border-radius: 24px;
+    border: 1px solid $white;
+    margin: 2px;
+    outline: none;
+    cursor: pointer;
+    //animation-name: circle_animation;
+  }
+}
+
+.section-container-yellow {
+  $yellow: #F4BD09;
+  $white: white;
+  $squareBackground: $white;
+  $squareFont: $yellow;
+  $squareBlankSpaceBackground: $yellow;
+  width: 100%;
+  height: 100%;
+  background: $yellow;
+
+  .puzzleContainer {
+    margin-top: 100px;
+  }
+
+  .square {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transition: transform 450ms ease;
+  }
+
+  .square-no-transform {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transform: none;
+    -webkit-transform: none; /* Safari and Chrome */
+    -moz-transform: none; /* Firefox */
+    -ms-transform: none; /* IE 9 */
+    -o-transform: none; /* Opera */
+  }
+
+  .square-blank-space {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 3%;
+    z-index: 0;
+    border: 2px solid $yellow;
+    background-color: $yellow;
+  }
+
+  .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $squareFont;
+    font-size: 32px;
+  }
+  .table-cell-btn {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $white;
+    font-size: 24px;
+  }
+
+  .nav {
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: $yellow;
+  }
+
+  .margin-bottom {
+    margin-bottom: 2%;
+    background-color: $yellow;
+  }
+
+  .result {
+    color: white;
+    margin-top: 20px;
+  }
+
+  .pill {
+    background-color: $yellow;
+    color: $white;
+    height: 40px;
+    width: 100px;
+    border-radius: 24px;
+    border: 1px solid $white;
+    margin: 2px;
+    outline: none;
+    cursor: pointer;
+    //animation-name: circle_animation;
+  }
+}
+
+.section-container-red {
+  $red: #EE4266;
+  $white: white;
+  $squareBackground: $white;
+  $squareFont: $red;
+  $squareBlankSpaceBackground: $red;
+  width: 100%;
+  height: 100%;
+  background: $red;
+
+  .puzzleContainer {
+    margin-top: 100px;
+  }
+
+  .square {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transition: transform 450ms ease;
+  }
+
+  .square-no-transform {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transform: none;
+    -webkit-transform: none; /* Safari and Chrome */
+    -moz-transform: none; /* Firefox */
+    -ms-transform: none; /* IE 9 */
+    -o-transform: none; /* Opera */
+  }
+
+  .square-blank-space {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 3%;
+    z-index: 0;
+    border: 2px solid $red;
+    background-color: $red;
+  }
+
+  .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $squareFont;
+    font-size: 32px;
+  }
+  .table-cell-btn {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $white;
+    font-size: 24px;
+  }
+
+  .nav {
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: $red;
+  }
+
+  .margin-bottom {
+    margin-bottom: 2%;
+    background-color: $red;
+  }
+
+  .result {
+    color: white;
+    margin-top: 20px;
+  }
+
+  .pill {
+    background-color: $red;
+    color: $white;
+    height: 40px;
+    width: 100px;
+    border-radius: 24px;
+    border: 1px solid $white;
+    margin: 2px;
+    outline: none;
+    cursor: pointer;
+    //animation-name: circle_animation;
+  }
+}
+
+.section-container-blue {
+  $blue: #445E93;
+  $white: white;
+  $squareBackground: $white;
+  $squareFont: $blue;
+  $squareBlankSpaceBackground: $blue;
+  width: 100%;
+  height: 100%;
+  background: $blue;
+
+  .puzzleContainer {
+    margin-top: 100px;
+  }
+
+  .square {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transition: transform 450ms ease;
+  }
+
+  .square-no-transform {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    background-color: $white;
+    border: 2px solid $squareBackground;
+    border-radius: 3%;
+    z-index: 1;
+    transform: none;
+    -webkit-transform: none; /* Safari and Chrome */
+    -moz-transform: none; /* Firefox */
+    -ms-transform: none; /* IE 9 */
+    -o-transform: none; /* Opera */
+  }
+
+  .square-blank-space {
+    float: left;
+    position: relative;
+    width: 31%;
+    padding-bottom: 31%;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 3%;
+    z-index: 0;
+    border: 2px solid $blue;
+    background-color: $blue;
+  }
+
+  .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $squareFont;
+    font-size: 32px;
+  }
+  .table-cell-btn {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    color: $white;
+    font-size: 24px;
+  }
+
+  .nav {
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: $blue;
+  }
+
+  .margin-bottom {
+    margin-bottom: 2%;
+    background-color: $blue;
+  }
+
+  .result {
+    color: white;
+    margin-top: 20px;
+  }
+
+  .pill {
+    background-color: $blue;
+    color: $white;
+    height: 40px;
+    width: 100px;
+    border-radius: 24px;
+    border: 1px solid $white;
+    margin: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
