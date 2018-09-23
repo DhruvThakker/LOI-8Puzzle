@@ -19,7 +19,7 @@
   <div class="row justify-content-center">
     <div class="col-md-4 col-lg-4 result" *ngIf="actionsList">
 <!--      <i *ngFor="let action of actionsList"> {{action}},</i> -->
-
+      <div class="label">Number of Moves = {{myMoves}}</div>
       <div class="lable">Heuristics</div>
       <div *ngFor="let heuristic of heuristicList; let idx = index">
         <div class="row">
@@ -39,9 +39,9 @@
   <div class="container-fluid nav">
     <div class="row">
       <div class="col">
-        <button class="pill" (click)="regenerate()" id="regenerator">Generate</button>
-        <button class="pill" (click)="solve()" id="solver">Solve</button>
-        <button class="pill" (click)="reset()" id="reseter">Reset</button>
+        <button class="pill" (click)="regenerate()" [disabled]="running">Generate</button>
+        <button class="pill" (click)="solve()" [disabled]="running">Solve</button>
+        <button class="pill" (click)="reset()" [disabled]="running">Reset</button>
       </div>
     </div>
    

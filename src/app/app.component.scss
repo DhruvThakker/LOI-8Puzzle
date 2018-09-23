@@ -2,6 +2,7 @@
 .section-container-green {
   $green: #00A896;
   $white: white;
+  $blue: #4286f4;
   $squareBackground: $white;
   $squareFont: $green;
   $squareBlankSpaceBackground: $green;
@@ -121,6 +122,12 @@
     outline: none;
     cursor: pointer;
     //animation-name: circle_animation;
+  }
+  .pill:hover {
+    opacity: 0.7;
+    background-color: $blue;
+    width: 110px;
+
   }
 }
 

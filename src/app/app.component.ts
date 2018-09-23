@@ -17,11 +17,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   N: number;
   generateCount: number;
   heuristicList: string[];
-
+  myMoves: number;
+  running: boolean;
   @ViewChildren('numInSquare') elList: QueryList<ElementRef>;
 
   constructor(private aStar: AStarService, private render: Renderer) {
-  };
+  }
 
   ngOnInit() {
     this.showResults = false;
@@ -30,6 +31,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.elDict = [];
     this.N = 3;
     this.generateCount = 0;
+    this.myMoves = 0;
+    this.running = false;
     this.generate();
     this.heuristicList = [ 'Manhattan', 'Hamming', 'Eucledian' ];
     this.aStar.heuristicIndex = 0;
@@ -64,6 +67,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   generate() {
+    this.myMoves = 0;
     this.showResults = false;
     this.aStar.generateGoalState(this.N);
     do {
@@ -74,9 +78,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   solve() {
+    console.log('Clicked');
+    this.running = true;
     this.showResults = true;
     const result = this.aStar.aStarAlgo(this.N);
     this.actionsList = result.actionList;
+    this.myMoves = this.actionsList.length;
     this.numbersAndActionsList = result.numbersAndActions;
     const translateXDict: {[action: string]: number} = {};
     const translateYDict: {[action: string]: number} = {};
@@ -107,10 +114,15 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.render.setElementStyle(nativeEl, 'transform', 'translate(' + x + '%,' + y + '%');
       }, 450 * (i + 1));
     }
+    const llen = this.numbersAndActionsList.length; 
+    setTimeout(() => {
+      this.running = false;
+    }, 450 * (llen));
   }
 
   reset() {
     this.actionsList = [];
+    this.myMoves = 0;
     this.elList.map(item => {
       this.render.setElementStyle(item.nativeElement, 'transform', 'translate(0,0)');
     });
